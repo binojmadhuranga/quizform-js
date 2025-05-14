@@ -42,18 +42,24 @@ window.onload = function () {
 
         }
     }, 1000);
+
+
+
+
+
+
 }
 
 
 
 let quiz01 = () => {
 
-    let score ;
+    let score;
     const answer1 = document.getElementById("option1").checked;
     const answer2 = document.getElementById("option2").checked;
     const answer3 = document.getElementById("option3").checked;
     const answer4 = document.getElementById("option4").checked;
-   
+
     if (answer1) {
         alert("answer Submitted!");
         localStorage.setItem("score", 1);
@@ -82,6 +88,45 @@ let quiz01 = () => {
 };
 
 
+let quiz02 = () => {
+
+    let score = localStorage.getItem("score");
+    const answer1 = document.getElementById("option1").checked;
+    const answer2 = document.getElementById("option2").checked;
+    const answer3 = document.getElementById("option3").checked;
+    const answer4 = document.getElementById("option4").checked;
+
+    // console.log(score);
+
+    if (answer1) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score);
+        window.location.href = "quiz03.html";
+    }
+    else if (answer2) {
+        alert("answer Submitted!");
+        score++;
+        localStorage.setItem("score", score);
+        window.location.href = "quiz03.html";
+    }
+    else if (answer3) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score);
+        window.location.href = "quiz03.html";
+    }
+    else if (answer4) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score);
+        window.location.href = "quiz03.html";
+    }
+    else {
+        alert("Please select an answer");
+    }
+
+
+
+
+}
 
 
 
@@ -89,8 +134,145 @@ let quiz01 = () => {
 
 
 
+let quiz03 = () => {
+
+    let score = localStorage.getItem("score");
+    const answer1 = document.getElementById("option1").checked;
+    const answer2 = document.getElementById("option2").checked;
+    const answer3 = document.getElementById("option3").checked;
+    const answer4 = document.getElementById("option4").checked;
+
+    // console.log(score);
+
+    if (answer1) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score);
+        window.location.href = "quiz04.html";
+    }
+    else if (answer2) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score++);
+        window.location.href = "quiz04.html";
+    }
+    else if (answer3) {
+        alert("answer Submitted!");
+        score++;
+        localStorage.setItem("score", score);
+        window.location.href = "quiz04.html";
+    }
+    else if (answer4) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score);
+        window.location.href = "quiz04.html";
+    }
+    else {
+        alert("Please select an answer");
+    }
 
 
+
+
+}
+
+
+
+
+let quiz04 = () => {
+
+    let score = localStorage.getItem("score");
+    const answer1 = document.getElementById("option1").checked;
+    const answer2 = document.getElementById("option2").checked;
+    const answer3 = document.getElementById("option3").checked;
+    const answer4 = document.getElementById("option4").checked;
+
+    console.log(score);
+
+    if (answer1) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score);
+        window.location.href = "quiz05.html";
+    }
+    else if (answer2) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score++);
+        window.location.href = "quiz05.html";
+    }
+    else if (answer3) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score);
+        window.location.href = "quiz05.html";
+    }
+    else if (answer4) {
+        alert("answer Submitted!");
+        score++;
+        localStorage.setItem("score", score);
+        window.location.href = "quiz05.html";
+    }
+    else {
+        alert("Please select an answer");
+    }
+
+
+}
+
+
+
+
+let quiz05 = () => {
+
+    let score = localStorage.getItem("score");
+    const answer1 = document.getElementById("option1").checked;
+    const answer2 = document.getElementById("option2").checked;
+    const answer3 = document.getElementById("option3").checked;
+    const answer4 = document.getElementById("option4").checked;
+
+    console.log(score);
+
+    if (answer1) {
+        alert("answer Submitted!");
+        score++;
+        localStorage.setItem("score", score);
+        window.location.href = "result.html";
+    }
+    else if (answer2) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score++);
+        window.location.href = "result.html";
+    }
+    else if (answer3) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score);
+        window.location.href = "result.html";
+    }
+    else if (answer4) {
+        alert("answer Submitted!");
+        localStorage.setItem("score", score);
+        window.location.href = "result.html";
+    }
+    else {
+        alert("Please select an answer");
+    }
+
+
+}
+
+
+
+
+
+let view = () => {
+    const score = localStorage.getItem("score");
+          const userName = localStorage.getItem("userName");
+          const resultElement = document.getElementById("scoreDisplay");
+
+          if (score && userName) {
+            const mark = score * (100 / 5);
+            resultElement.textContent = `${userName}, your score is ${mark}%`;
+          } else {
+            resultElement.textContent = "Score or username not found!";
+          }
+    
+}
 
 
 

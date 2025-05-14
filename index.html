@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+
+</head>
+
+<body class="bg-gray-100 flex flex-col min-h-screen overflow-hidden items-center">
+
+    <div class="relative w-[100vw]">
+        <header class="sticky top-0 bg-[#5EB562] px-4 ">
+            <img src="./Assets/FAQ.png" alt="image" class="h-[80px]">
+        </header>
+    </div>
+
+
+    <div class="bg-[#5EB56233] p-6 rounded-b-lg mt-10 h-[80vh] lg:w-[35vw] md:w-[50vw] sm:w-[70vw] w-[80vw] flex flex-col justify-evenly items-center">
+        <h2 class="text-center text-xl font-semibold text-[#5EB562] mb-6">Login</h2>
+        <div class="flex justify-center mb-6">
+            <div class="w-32 h-32 bg-green-200 rounded-full flex items-center justify-center">
+               <img src="/Assets/Ellipse 5.png" alt="">
+            </div>
+        </div>
+        <div class="mb-6 w-[80%]">
+            <input type="text" placeholder="Name " id="nameinput"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-white">
+        </div>
+        <button class=" bg-[#5EB562] text-white py-3 rounded-lg hover:bg-green-700 transition-colors w-[30%]" onclick="start()">
+            Start
+        </button>
+
+       
+    </div>
+
+
+
+
+    <script src="./index.js"> </script>
+</body>
+
+</html>

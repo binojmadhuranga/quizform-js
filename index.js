@@ -260,19 +260,21 @@ let quiz05 = () => {
 
 
 
-let view = () => {
-    const score = localStorage.getItem("score");
-          const userName = localStorage.getItem("userName");
-          const resultElement = document.getElementById("scoreDisplay");
+// let view = () => {
+//     const score = localStorage.getItem("score");
+//           const userName = localStorage.getItem("userName");
+//           const resultElement = document.getElementById("scoreDisplay");
 
-          if (score && userName) {
-            const mark = score * (100 / 5);
-            resultElement.textContent = `${userName}, your score is ${mark}%`;
-          } else {
-            resultElement.textContent = "Score or username not found!";
-          }
+//           if (score && userName) {
+//             const mark = score * (100 / 5);
+//             resultElement.textContent = `${userName}, your score is ${mark}%`;
+//           } else {
+//             resultElement.textContent = "Score or username not found!";
+//           }
     
-}
+// }
+
+
 
 
 

@@ -2,18 +2,22 @@
 let userName;
 
 let start = () => {
-    userName = document.getElementById("nameinput").value;
-
+     userName = document.getElementById("nameinput").value;
+    
 
     if (userName.length > 0) {
+        
         localStorage.setItem("userName", userName);
         window.location.href = "quiz01.html";
+        
 
     }
 
     else {
         alert("Please enter your name");
     }
+
+
 
 }
 
